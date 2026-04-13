@@ -19,6 +19,7 @@ npx skillfish add Satcomx00-x00/skills-db/skills/testing
 npx skillfish add Satcomx00-x00/skills-db/skills/devops
 npx skillfish add Satcomx00-x00/skills-db/skills/frontend
 npx skillfish add Satcomx00-x00/skills-db/skills/backend
+npx skillfish add Satcomx00-x00/skills-db/skills/code-quality
 ```
 
 ## Team Skill Sync
@@ -36,7 +37,8 @@ Add a `skillfish.json` to your project to share skills across your team:
     "Satcomx00-x00/skills-db/skills/testing",
     "Satcomx00-x00/skills-db/skills/devops",
     "Satcomx00-x00/skills-db/skills/frontend",
-    "Satcomx00-x00/skills-db/skills/backend"
+    "Satcomx00-x00/skills-db/skills/backend",
+    "Satcomx00-x00/skills-db/skills/code-quality"
   ]
 }
 ```
@@ -58,6 +60,7 @@ npx skillfish install
 | [`devops`](skills/devops/SKILL.md) | CI/CD pipelines, deployment strategies, observability |
 | [`frontend`](skills/frontend/SKILL.md) | Component design, accessibility, Core Web Vitals |
 | [`backend`](skills/backend/SKILL.md) | REST API design, auth patterns, database best practices |
+| [`code-quality`](skills/code-quality/SKILL.md) | Refactoring techniques and design patterns (GoF) |
 
 ## Supported Agents
 
@@ -75,6 +78,42 @@ skills/
   devops/SKILL.md
   frontend/SKILL.md
   backend/SKILL.md
+  code-quality/
+    SKILL.md                          ← category overview
+    extract-method/SKILL.md
+    inline-method/SKILL.md
+    extract-variable/SKILL.md
+    replace-temp-with-query/SKILL.md
+    replace-magic-number/SKILL.md
+    decompose-conditional/SKILL.md
+    guard-clauses/SKILL.md
+    replace-conditional-polymorphism/SKILL.md
+    extract-class/SKILL.md
+    move-method/SKILL.md
+    introduce-parameter-object/SKILL.md
+    separate-query-from-modifier/SKILL.md
+    singleton/SKILL.md
+    factory-method/SKILL.md
+    abstract-factory/SKILL.md
+    builder/SKILL.md
+    prototype/SKILL.md
+    adapter/SKILL.md
+    bridge/SKILL.md
+    composite/SKILL.md
+    decorator/SKILL.md
+    facade/SKILL.md
+    flyweight/SKILL.md
+    proxy/SKILL.md
+    chain-of-responsibility/SKILL.md
+    command/SKILL.md
+    iterator/SKILL.md
+    mediator/SKILL.md
+    memento/SKILL.md
+    observer/SKILL.md
+    state/SKILL.md
+    strategy/SKILL.md
+    template-method/SKILL.md
+    visitor/SKILL.md
 ```
 
 Each skill is a folder containing a `SKILL.md` file with YAML frontmatter (`name`, `description`, `license`, `metadata`) and sections for Instructions, Examples, and References.
