@@ -1,6 +1,6 @@
 ---
 name: observer
-description: Define a one-to-many dependency so that when one object changes state all its dependents are notified automatically.
+description: Define a one-to-many dependency so that when one object changes state all its dependents are notified automatically. Use when state changes in one object must trigger updates in others — event systems, reactive UI, pub/sub messaging, data binding, and any place where you want to avoid tight polling loops.
 license: MIT
 metadata:
   author: Satcomx00-x00

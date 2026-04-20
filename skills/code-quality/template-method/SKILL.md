@@ -1,6 +1,6 @@
 ---
 name: template-method
-description: Define the skeleton of an algorithm in a base class, deferring specific steps to subclasses.
+description: Define the skeleton of an algorithm in a base class, deferring specific steps to subclasses. Use when you want to define the invariant parts of an algorithm once and let subclasses implement the variant steps — parsing pipelines, report generation, data processing, game AI turns.
 license: MIT
 metadata:
   author: Satcomx00-x00

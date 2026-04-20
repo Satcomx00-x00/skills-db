@@ -1,6 +1,6 @@
 ---
 name: facade
-description: Provide a simplified interface to a complex subsystem.
+description: Provide a simplified interface to a complex subsystem. Use when a subsystem is difficult to use directly, you want to layer a clean API over legacy or third-party code, or you want to shield clients from implementation details and reduce coupling.
 license: MIT
 metadata:
   author: Satcomx00-x00

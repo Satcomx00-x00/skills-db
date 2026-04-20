@@ -1,6 +1,6 @@
 ---
 name: inline-method
-description: Replace a call to a trivial method with the method's body directly.
+description: Replace a call to a trivial method with the method's body directly. Use when a method body is as clear as its name, when a method only delegates to another, or when removing unnecessary indirection makes the code easier to follow.
 license: MIT
 metadata:
   author: Satcomx00-x00

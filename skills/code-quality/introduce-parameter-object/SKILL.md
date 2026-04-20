@@ -1,6 +1,6 @@
 ---
 name: introduce-parameter-object
-description: Replace a recurring group of parameters with a single data object.
+description: Replace a recurring group of parameters with a single data object. Use when a function takes more than 4 parameters, the same parameter group appears across multiple functions, or the parameters form a natural concept (date range, address, coordinates, bounding box).
 license: MIT
 metadata:
   author: Satcomx00-x00

@@ -1,6 +1,6 @@
 ---
 name: singleton
-description: Ensure a class has only one instance and provide a global access point to it.
+description: Ensure a class has only one instance and provide a global access point to it. Use when exactly one shared instance is needed across the system — config, logger, connection pool — but prefer dependency injection over global access when the architecture allows it.
 license: MIT
 metadata:
   author: Satcomx00-x00

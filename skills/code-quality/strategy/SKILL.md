@@ -1,6 +1,6 @@
 ---
 name: strategy
-description: Define a family of algorithms, encapsulate each one, and make them interchangeable at runtime.
+description: Define a family of algorithms, encapsulate each one, and make them interchangeable at runtime. Use when you have multiple variants of an algorithm, a large conditional that selects between algorithm variants, or need to inject swappable behaviour (sorting, pricing, routing, validation, compression).
 license: MIT
 metadata:
   author: Satcomx00-x00

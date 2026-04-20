@@ -1,6 +1,6 @@
 ---
 name: memento
-description: Capture and restore an object's internal state without violating encapsulation.
+description: Capture and restore an object's internal state without violating encapsulation. Use when you need undo/redo functionality, snapshots, or the ability to roll back an object to a previous state — text editors, game saves, form wizards, transaction rollback.
 license: MIT
 metadata:
   author: Satcomx00-x00

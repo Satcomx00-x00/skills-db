@@ -1,6 +1,6 @@
 ---
 name: bridge
-description: Decouple an abstraction from its implementation so both can vary independently.
+description: Decouple an abstraction from its implementation so both can vary independently. Use when you want to avoid a combinatorial explosion of subclasses, or when abstraction and implementation should evolve independently — e.g., UI controls across platforms, or shapes with different rendering engines.
 license: MIT
 metadata:
   author: Satcomx00-x00

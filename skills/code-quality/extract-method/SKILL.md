@@ -1,6 +1,6 @@
 ---
 name: extract-method
-description: Pull a code fragment into a named method to improve readability and enable reuse.
+description: Pull a code fragment into a named method to improve readability and enable reuse. Use when a method is too long, the same logic repeats across functions, or a comment describes what a block does — the comment should become the method name.
 license: MIT
 metadata:
   author: Satcomx00-x00

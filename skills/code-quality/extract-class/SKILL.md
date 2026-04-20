@@ -1,6 +1,6 @@
 ---
 name: extract-class
-description: Split a class that holds too many responsibilities into two focused classes.
+description: Split a class that holds too many responsibilities into two focused classes. Use when a class is too large, has fields or methods that belong to a distinct sub-concept, or has multiple unrelated reasons to change — a clear Single Responsibility Principle violation.
 license: MIT
 metadata:
   author: Satcomx00-x00

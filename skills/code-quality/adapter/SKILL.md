@@ -1,6 +1,6 @@
 ---
 name: adapter
-description: Convert the interface of a class into another interface that clients expect, enabling incompatible interfaces to work together.
+description: Convert the interface of a class into another interface that clients expect, enabling incompatible interfaces to work together. Use when integrating third-party libraries, legacy code, or external APIs whose interface doesn't match what your code expects — rather than modifying either side.
 license: MIT
 metadata:
   author: Satcomx00-x00

@@ -1,6 +1,6 @@
 ---
 name: command
-description: Encapsulate a request as an object, enabling undo/redo, queuing, and logging of operations.
+description: Encapsulate a request as an object, enabling undo/redo, queuing, and logging of operations. Use when you need undoable operations, task queues, audit logs, transactional behaviour, or want to parameterize objects with actions and schedule their execution.
 license: MIT
 metadata:
   author: Satcomx00-x00

@@ -1,6 +1,6 @@
 ---
 name: builder
-description: Construct complex objects step by step, separating construction from representation.
+description: Construct complex objects step by step, separating construction from representation. Use when an object has many optional fields, telescoping constructors, or complex construction logic — builder makes creation readable and eliminates invalid intermediate states.
 license: MIT
 metadata:
   author: Satcomx00-x00

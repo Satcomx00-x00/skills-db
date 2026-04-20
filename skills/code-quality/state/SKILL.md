@@ -1,6 +1,6 @@
 ---
 name: state
-description: Allow an object to alter its behaviour when its internal state changes — the object will appear to change its class.
+description: Allow an object to alter its behaviour when its internal state changes — the object will appear to change its class. Use when an object's behaviour depends heavily on its current state and it has many state-dependent conditionals — order workflows, authentication flows, traffic lights, vending machines.
 license: MIT
 metadata:
   author: Satcomx00-x00

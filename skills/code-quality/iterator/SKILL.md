@@ -1,6 +1,6 @@
 ---
 name: iterator
-description: Traverse elements of a collection without exposing its internal representation.
+description: Traverse elements of a collection without exposing its internal representation. Use when you want to provide a standard way to iterate over a custom collection, or when you want to hide the internal data structure from consumers while still supporting foreach-style traversal.
 license: MIT
 metadata:
   author: Satcomx00-x00

@@ -1,6 +1,6 @@
 ---
 name: proxy
-description: Provide a substitute that controls access to another object, adding behaviour such as caching, access control, or lazy initialisation.
+description: Provide a substitute that controls access to another object, adding behaviour such as caching, access control, or lazy initialisation. Use when you need lazy loading, access control, logging, or caching around an object without modifying it — virtual proxy, protection proxy, or remote proxy.
 license: MIT
 metadata:
   author: Satcomx00-x00

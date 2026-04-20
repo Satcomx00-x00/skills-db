@@ -1,6 +1,6 @@
 ---
 name: mediator
-description: Reduce direct dependencies between objects by routing communication through a central mediator.
+description: Reduce direct dependencies between objects by routing communication through a central mediator. Use when many objects communicate in complex ways causing tight coupling — chat rooms, UI form coordination, air traffic control patterns, and any many-to-many interaction that's becoming unmanageable.
 license: MIT
 metadata:
   author: Satcomx00-x00

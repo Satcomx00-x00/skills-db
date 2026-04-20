@@ -1,6 +1,6 @@
 ---
 name: composite
-description: Compose objects into tree structures and treat individual objects and compositions uniformly.
+description: Compose objects into tree structures and treat individual objects and compositions uniformly. Use when you need to represent part-whole hierarchies (file systems, UI component trees, org charts) and want clients to treat leaves and composites identically.
 license: MIT
 metadata:
   author: Satcomx00-x00

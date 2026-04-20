@@ -1,6 +1,6 @@
 ---
 name: decorator
-description: Attach new behaviour to objects at runtime by wrapping them in decorator objects.
+description: Attach new behaviour to objects at runtime by wrapping them in decorator objects. Use when you need to add responsibilities to objects dynamically without subclassing — logging, caching, auth wrapping, compression, rate limiting — and want the additions to be composable and removable.
 license: MIT
 metadata:
   author: Satcomx00-x00

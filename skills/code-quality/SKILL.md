@@ -1,15 +1,47 @@
 ---
 name: code-quality
-description: Code quality mastery — programming principles (SOLID, DRY, KISS, YAGNI…), refactoring techniques, and design patterns to write clean, maintainable, extensible software.
+description: Apply programming principles (SOLID, DRY, KISS, YAGNI, LoD, CQS), refactoring techniques, and design patterns to write clean, maintainable, extensible code. Use this skill whenever someone asks to refactor code, review code quality, clean up messy code, reduce duplication, improve architecture, fix code smells, apply design patterns, or says things like "this code is ugly", "this is getting hard to maintain", "how do I structure this better", or "can you clean this up" — even if they don't use the words "code quality".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # code-quality
 
 Code quality mastery — programming principles (SOLID, DRY, KISS, YAGNI…), refactoring techniques, and design patterns to write clean, maintainable, extensible software.
+
+## Workflow
+
+When asked to improve or review code quality:
+
+1. **Identify smells** — scan the code for the symptoms in the table below
+2. **Diagnose** — determine which principle is being violated
+3. **Select a technique** — pick the most impactful refactoring or pattern (start with the highest-value, lowest-risk change)
+4. **Apply incrementally** — make one change at a time; preserve observable behaviour at each step
+5. **Explain the why** — tell the user what you changed and why, so they learn the principle, not just the fix
+
+### Code Smell → Diagnosis → Technique
+
+| Symptom | Violated Principle | Technique |
+|---------|-------------------|-----------|
+| Method > 30 lines | SRP / too much responsibility | [`extract-method`](extract-method/SKILL.md), [`guard-clauses`](guard-clauses/SKILL.md) |
+| Class > 300 lines | SRP violation | [`extract-class`](extract-class/SKILL.md), [`move-method`](move-method/SKILL.md) |
+| Deep `if/else` nesting | Complexity / SRP | [`guard-clauses`](guard-clauses/SKILL.md), [`decompose-conditional`](decompose-conditional/SKILL.md) |
+| Switch / if-chain on a type field | OCP / LSP violation | [`replace-conditional-polymorphism`](replace-conditional-polymorphism/SKILL.md) |
+| Parameter list > 4 items | Low cohesion | [`introduce-parameter-object`](introduce-parameter-object/SKILL.md) |
+| Duplicated code blocks | DRY violation | [`extract-method`](extract-method/SKILL.md) |
+| Hard-to-read expression | Clarity / naming | [`extract-variable`](extract-variable/SKILL.md) |
+| Unexplained literal (`86400`, `'ADMIN'`) | Readability | [`replace-magic-number`](replace-magic-number/SKILL.md) |
+| Deep chain `a.b.c.d` | Law of Demeter | [`move-method`](move-method/SKILL.md) |
+| Method returns a value AND mutates state | CQS violation | [`separate-query-from-modifier`](separate-query-from-modifier/SKILL.md) |
+| Temp variable caches a simple calculation | Clarity | [`replace-temp-with-query`](replace-temp-with-query/SKILL.md) |
+| Trivial one-liner method | YAGNI / over-indirection | [`inline-method`](inline-method/SKILL.md) |
+| Creation logic scattered or conditional | Creational complexity | [`factory-method`](factory-method/SKILL.md), [`builder`](builder/SKILL.md) |
+| Runtime behaviour switching on type | Open/Closed | [`strategy`](strategy/SKILL.md), [`state`](state/SKILL.md) |
+| Tightly coupled cross-object communication | Coupling | [`mediator`](mediator/SKILL.md), [`observer`](observer/SKILL.md) |
+
+> **Language note**: All principles and techniques apply regardless of language. Examples below use TypeScript, but the same patterns work in Python, Java, Go, C#, and others — adjust syntax accordingly.
 
 ## Instructions
 

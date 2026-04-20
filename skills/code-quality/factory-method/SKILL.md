@@ -1,6 +1,6 @@
 ---
 name: factory-method
-description: Define an interface for creating an object but let subclasses decide which class to instantiate.
+description: Define an interface for creating an object but let subclasses decide which class to instantiate. Use when you need to decouple object creation from its usage, or when the exact type to instantiate depends on context or configuration and you want the creation logic extensible without modification.
 license: MIT
 metadata:
   author: Satcomx00-x00

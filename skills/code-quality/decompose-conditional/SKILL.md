@@ -1,6 +1,6 @@
 ---
 name: decompose-conditional
-description: Extract complex condition logic and branches into clearly named methods.
+description: Extract complex condition logic and branches into clearly named methods. Use when an if-condition is hard to read at a glance, branch bodies are long and need explaining, or a comment is needed to understand what a condition tests.
 license: MIT
 metadata:
   author: Satcomx00-x00

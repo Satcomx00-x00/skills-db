@@ -1,6 +1,6 @@
 ---
 name: visitor
-description: Separate an algorithm from the object structure it operates on, allowing new operations without modifying the classes.
+description: Separate an algorithm from the object structure it operates on, allowing new operations without modifying the classes. Use when you need to add new operations to a class hierarchy without changing those classes — compilers and AST traversal, document export to multiple formats, reporting over complex object graphs.
 license: MIT
 metadata:
   author: Satcomx00-x00

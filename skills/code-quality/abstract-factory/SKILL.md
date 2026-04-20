@@ -1,6 +1,6 @@
 ---
 name: abstract-factory
-description: Produce families of related objects without specifying their concrete classes.
+description: Produce families of related objects without specifying their concrete classes. Use when a system must create families of related objects (UI themes, database drivers, cloud providers) and you want to swap the entire family at once without changing client code.
 license: MIT
 metadata:
   author: Satcomx00-x00

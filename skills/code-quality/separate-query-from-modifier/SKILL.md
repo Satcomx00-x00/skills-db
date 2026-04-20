@@ -1,6 +1,6 @@
 ---
 name: separate-query-from-modifier
-description: Split a method that both returns a value and changes state into two separate methods.
+description: Split a method that both returns a value and changes state into two separate methods. Use when a method has a return value AND a side effect — this violates Command-Query Separation (CQS) and makes the code surprising and hard to test.
 license: MIT
 metadata:
   author: Satcomx00-x00

@@ -1,6 +1,6 @@
 ---
 name: guard-clauses
-description: Replace nested conditional logic with early returns (guard clauses) to reduce nesting and clarify intent.
+description: Replace nested conditional logic with early returns (guard clauses) to reduce nesting and clarify intent. Use when a method has deep if/else nesting, handles special or error cases before the main logic, or has high cyclomatic complexity that makes the happy path hard to find.
 license: MIT
 metadata:
   author: Satcomx00-x00

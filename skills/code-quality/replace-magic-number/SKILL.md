@@ -1,6 +1,6 @@
 ---
 name: replace-magic-number
-description: Replace a bare numeric or string literal with a named symbolic constant.
+description: Replace a bare numeric or string literal with a named symbolic constant. Use whenever you see unexplained numbers or strings in code — 86400, 0.15, 'ADMIN', 404 — they should be named constants that communicate intent.
 license: MIT
 metadata:
   author: Satcomx00-x00

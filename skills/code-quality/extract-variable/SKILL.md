@@ -1,6 +1,6 @@
 ---
 name: extract-variable
-description: Give a name to a complex expression by assigning it to a well-named variable.
+description: Give a name to a complex expression by assigning it to a well-named variable. Use when an expression is hard to read at a glance, appears in multiple places, or would benefit from a self-documenting name that explains the intent.
 license: MIT
 metadata:
   author: Satcomx00-x00

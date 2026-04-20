@@ -1,6 +1,6 @@
 ---
 name: prototype
-description: Create new objects by copying (cloning) an existing object instead of constructing from scratch.
+description: Create new objects by copying (cloning) an existing object instead of constructing from scratch. Use when object creation is expensive, when you need many copies of objects with slight variations at runtime, or when the exact class to create is unknown until runtime.
 license: MIT
 metadata:
   author: Satcomx00-x00

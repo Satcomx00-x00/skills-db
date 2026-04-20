@@ -1,6 +1,6 @@
 ---
 name: chain-of-responsibility
-description: Pass a request along a chain of handlers; each handler decides to process or forward it.
+description: Pass a request along a chain of handlers; each handler decides to process or forward it. Use when more than one object might handle a request and you want to decouple sender from receiver — middleware pipelines, event handling, validation chains, request processing.
 license: MIT
 metadata:
   author: Satcomx00-x00

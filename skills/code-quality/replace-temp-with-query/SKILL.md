@@ -1,6 +1,6 @@
 ---
 name: replace-temp-with-query
-description: Replace a local variable that caches an expression with a method call so the expression becomes reusable.
+description: Replace a local variable that caches an expression with a method call so the expression becomes reusable. Use when a temp variable is assigned once from a simple expression that could be computed on demand and reused across the class.
 license: MIT
 metadata:
   author: Satcomx00-x00

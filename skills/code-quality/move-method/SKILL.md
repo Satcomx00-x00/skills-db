@@ -1,6 +1,6 @@
 ---
 name: move-method
-description: Move a method to the class it uses most so that related behaviour lives together.
+description: Move a method to the class it uses most so that related behaviour lives together. Use when a method references another class more than its own, when you want to reduce coupling between classes, or when cohesion within a class needs improving.
 license: MIT
 metadata:
   author: Satcomx00-x00

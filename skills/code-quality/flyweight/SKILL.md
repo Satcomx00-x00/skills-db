@@ -1,6 +1,6 @@
 ---
 name: flyweight
-description: Reduce memory usage by sharing common state among many fine-grained objects.
+description: Reduce memory usage by sharing common state among many fine-grained objects. Use when creating large numbers of similar objects is causing memory pressure — particles in a game, characters in a text editor, map tiles, cells in a spreadsheet.
 license: MIT
 metadata:
   author: Satcomx00-x00

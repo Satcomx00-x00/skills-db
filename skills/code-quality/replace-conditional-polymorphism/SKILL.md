@@ -1,6 +1,6 @@
 ---
 name: replace-conditional-polymorphism
-description: Replace a type-switch or repeated type-checks with polymorphism so each subclass handles its own behaviour.
+description: Replace a type-switch or repeated type-checks with polymorphism so each subclass handles its own behaviour. Use when you see switch statements on a type field, chains of if/else checking instanceof/typeof, or the same conditional scattered across multiple methods — these are Open/Closed principle violations.
 license: MIT
 metadata:
   author: Satcomx00-x00
