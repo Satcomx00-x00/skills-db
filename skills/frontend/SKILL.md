@@ -15,6 +15,35 @@ Frontend development patterns — component design, accessibility, performance o
 
 Apply these frontend practices when building user interfaces:
 
+## Guidelines
+
+### Type Safety
+
+- **Type-safe props**: every component must have an explicit props type or interface — no implicit `any`, no untyped `children`
+- **Validated forms**: use React Hook Form + Zod resolver (or equivalent) for form validation — never trust `event.target.value` directly without parsing
+- **API response types**: generate or define types for every API response; never spread untyped API data into state
+- **Event handler types**: use precise event types (`React.ChangeEvent<HTMLInputElement>`) instead of `any`
+
+### Error Handling
+
+- Every data-fetching hook must expose `isLoading`, `error`, and `data` states — handle all three in the UI
+- Wrap async UI sections in an `ErrorBoundary` component
+- Display user-friendly error messages — never render raw `error.message` from API responses directly
+
+### Performance Baseline
+
+- No synchronous expensive computations in the render path — defer with `useMemo`/`useCallback` only after profiling confirms the bottleneck
+- Images must have explicit `width` and `height` to prevent layout shifts (CLS)
+- Bundle size budget: warn if a single route chunk exceeds 250 kB gzipped
+
+### Accessibility Baseline
+
+- All interactive elements must be operable by keyboard alone
+- Colour contrast must meet WCAG 2.1 AA (≥ 4.5:1 for body text)
+- Automated accessibility checks (`axe-core` or `eslint-plugin-jsx-a11y`) must pass in CI
+
+---
+
 ### Component Design Principles
 
 **Single Responsibility**: each component does one thing. Split large components into smaller, composable pieces.

@@ -15,6 +15,36 @@ Backend and API design patterns — RESTful and GraphQL API conventions, error h
 
 Apply these backend practices when building services and APIs:
 
+## Guidelines
+
+### Type Safety
+
+- **Type-safe schemas for every route**: define request and response types with Zod (TypeScript) or Pydantic (Python); validate before any business logic runs
+- **Typed database models**: use an ORM with typed models (Prisma, Drizzle, SQLAlchemy); never return raw untyped query results
+- **Validated environment variables**: parse and validate all `process.env` / `os.environ` values at application boot using a typed schema — fail fast if required vars are missing or invalid
+- **No `any` in controller, service, or repository layers** — every function must have explicit parameter and return types
+
+### Error Handling
+
+- Every route handler must be wrapped in error-catching middleware or use typed `Result`/`Either` types
+- Database errors must be caught and converted to domain errors before reaching the controller
+- Never expose internal error details (stack traces, DB query strings) to API consumers
+- Always return a `traceId` in error responses for debuggability
+
+### Async / Performance
+
+- All I/O operations (DB, HTTP, file) must be async — no synchronous blocking calls in request handlers
+- Set explicit timeouts on all outbound HTTP calls and DB queries
+- Use connection pooling for database connections; never create a new connection per request
+
+### Security Baseline
+
+- Validate and sanitise every request field — reject unknown fields (strict schema parsing)
+- Rate-limit all public endpoints
+- Never log request bodies that may contain credentials or PII
+
+---
+
 ### RESTful API Design
 
 **Resource naming — use nouns, not verbs:**

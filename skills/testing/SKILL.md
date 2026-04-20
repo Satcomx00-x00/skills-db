@@ -15,6 +15,38 @@ Testing strategies and best practices — TDD workflow, test pyramid, unit/integ
 
 Apply these testing practices when writing or reviewing tests:
 
+## Guidelines
+
+### Type Safety in Tests
+
+- Test helpers, factories, and fixtures must be fully typed — no `any` in test setup
+- Use typed mocks: prefer `jest.mocked<T>()` / `vi.mocked<T>()` over casting to `any`
+- Assert on precise types where possible to catch type regressions alongside logic regressions
+
+### Test Quality Rules
+
+- **One logical behaviour per test** — tests that assert multiple unrelated things are hard to diagnose when they fail
+- **No magic values in assertions** — extract expected values into named constants with explanatory names
+- **Tests are first-class code**: apply the same quality rules (naming, size limits, DRY) to test files as to production code
+- **Deterministic only**: no `Date.now()`, `Math.random()`, network calls, or filesystem side-effects in unit tests — mock or inject them
+
+### Coverage Requirements
+
+| Layer | Minimum coverage |
+|-------|-----------------|
+| Business logic (services) | ≥ 80% |
+| Utility functions | ≥ 90% |
+| Controllers / route handlers | ≥ 70% |
+| Generated / boilerplate code | exempt |
+
+### CI Requirements
+
+- Tests **must** run in CI on every push and pull request
+- Failing tests **must** block merge — no bypassing the test gate
+- Unit + integration test suite must complete in < 5 minutes; E2E runs in a separate, optional stage
+
+---
+
 ### The Test Pyramid
 
 Follow the classic test pyramid for a balanced, fast, and reliable test suite:
