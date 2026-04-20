@@ -1,19 +1,33 @@
 ---
 name: code-review
-description: Code review standards and checklist — how to give constructive feedback, what to look for, and how to approve or request changes effectively.
+description: Code review standards and checklist — how to give constructive feedback, what to look for, and how to approve or request changes effectively. Use this skill whenever someone asks to review code, provide feedback on a pull request, check code for bugs or issues, evaluate a PR, audit code quality, or says things like "can you look at this code", "what's wrong with this", or "is this code good" — even if they don't use the phrase "code review".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # code-review
 
 Code review standards and checklist — how to give constructive feedback, what to look for, and how to approve or request changes effectively.
 
-## Instructions
+## Workflow
 
-When reviewing code (as an agent or assisting a human reviewer), apply the following checklist and principles:
+When reviewing code (as an agent or assisting a human reviewer):
+
+1. **Understand intent** — read the PR description / commit message first; understand what the change is trying to achieve before reading the diff
+2. **Scan for blocking issues** — check type safety, error handling, and security first (these must be resolved before merge)
+3. **Apply the checklist** — work through Correctness → Security → Performance → Readability → Tests → Dependencies
+4. **Label every comment** — use `issue:` (blocking), `suggestion:` (improvement), `nit:` (minor), `question:` (clarification), `praise:` (positive)
+5. **Summarise at the top** — give an overall verdict with a list of blocking issues so the author knows immediately what must change
+
+**Output format:**
+```
+## Review Summary
+Verdict: [Approve | Request changes | Comment]
+Blocking issues: (list any issue: comments here)
+Suggestions: (list key suggestions)
+```
 
 ## Guidelines
 

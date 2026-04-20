@@ -1,6 +1,6 @@
 ---
 name: saas
-description: SaaS state-of-the-art — multi-tenancy, usage-based billing, PLG, AI feature integration, modern observability, compliance, and security for production Software-as-a-Service products.
+description: SaaS state-of-the-art — multi-tenancy, usage-based billing, PLG, AI feature integration, modern observability, compliance, and security for production Software-as-a-Service products. Use this skill whenever someone is building a SaaS product, implementing multi-tenancy or tenant isolation, setting up Stripe billing or webhooks, adding feature flags, building an onboarding flow, or asks how to structure a product for multiple customers — even if they don't say "SaaS patterns".
 license: MIT
 metadata:
   author: Satcomx00-x00

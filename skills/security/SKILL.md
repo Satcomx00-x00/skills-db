@@ -1,15 +1,37 @@
 ---
 name: security
-description: Application security practices — OWASP Top 10 mitigations, secret management, dependency scanning, and secure coding patterns for web and API projects.
+description: Application security practices — OWASP Top 10 mitigations, secret management, dependency scanning, and secure coding patterns for web and API projects. Use this skill whenever someone asks about securing an application, reviewing code for vulnerabilities, handling authentication or authorisation, managing secrets, scanning for dependency issues, or says things like "is this secure", "how do I prevent SQL injection", or "how should I store passwords" — even if they don't say "security".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # security
 
 Application security practices — OWASP Top 10 mitigations, secret management, dependency scanning, and secure coding patterns for web and API projects.
+
+## Workflow
+
+When reviewing or implementing security:
+
+1. **Model the threats first** — identify trust boundaries (API inputs, auth tokens, third-party data, env vars) before choosing controls
+2. **Input validation and output escaping** — validate all input at entry points with an allowlist; escape output context-appropriately (HTML, SQL, shell, URL)
+3. **Authentication and authorisation** — enforce authZ on every server-side endpoint (deny-by-default); validate tokens on every request; never trust client-supplied IDs
+4. **Secrets out of code** — no hardcoded credentials; use a secrets manager or env vars; run `gitleaks` / `trufflehog` in CI and pre-commit
+5. **Dependency and image scanning** — run `npm audit` / `pip-audit` / `trivy` in CI on every build; automate updates with Dependabot or Renovate
+
+### OWASP Top 10 Quick Reference
+
+| Risk | Key Control |
+|------|------------|
+| A01 Broken Access Control | Deny-by-default; validate resource ownership per request |
+| A02 Cryptographic Failures | bcrypt/argon2id for passwords; TLS 1.2+; HSTS; encrypt PII at rest |
+| A03 Injection | Parameterised queries; Zod/Pydantic validation; escape all output |
+| A05 Security Misconfiguration | Security headers (Helmet); remove defaults; never commit `.env` |
+| A06 Vulnerable Components | `npm audit` / `trivy` in CI; Dependabot auto-updates |
+| A07 Auth Failures | MFA for admins; rate-limit login; `HttpOnly; Secure; SameSite` cookies |
+| A09 Logging Failures | Log auth events; never log passwords/PII; alert on anomalies |
 
 ## Instructions
 

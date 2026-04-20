@@ -1,10 +1,10 @@
 ---
 name: python
-description: Modern Python coding standards using uv — full type annotations, Pydantic v2 runtime validation, Ruff linting/formatting, mypy strict mode, and loguru structured logging.
+description: Modern Python coding standards using uv — full type annotations, Pydantic v2 runtime validation, Ruff linting/formatting, mypy strict mode, and loguru structured logging. Use this skill whenever someone is writing Python code, setting up a Python project, using FastAPI or Pydantic, asking about typing in Python, or wants to know the idiomatic Python way to do something — even if they don't ask for "Python standards".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # python

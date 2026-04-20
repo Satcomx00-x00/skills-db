@@ -1,10 +1,10 @@
 ---
 name: typescript
-description: State-of-the-art TypeScript — strict compiler settings, Zod runtime validation, branded types, discriminated unions, and modern language features for fully type-safe codebases.
+description: State-of-the-art TypeScript — strict compiler settings, Zod runtime validation, branded types, discriminated unions, and modern language features for fully type-safe codebases. Use this skill whenever someone is writing TypeScript, setting up a tsconfig, working with type safety, using Zod, defining types for API responses or forms, or asks about TypeScript patterns — even if they don't ask for "TypeScript standards".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # typescript

@@ -1,10 +1,10 @@
 ---
 name: betterauth
-description: BetterAuth integration patterns — setup, session management, OAuth providers, middleware protection, and security best practices for authentication in TypeScript/Next.js applications.
+description: BetterAuth integration patterns — setup, session management, OAuth providers, middleware protection, and security best practices for authentication in TypeScript/Next.js applications. Use this skill whenever someone wants to add authentication or login to a Next.js / TypeScript app, implement OAuth (GitHub, Google, etc.), manage sessions, protect routes, set up RBAC, or asks "how do I add auth to my app" — even if they don't mention BetterAuth by name.
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # betterauth

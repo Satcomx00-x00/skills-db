@@ -1,15 +1,35 @@
 ---
 name: devops
-description: CI/CD pipeline design and DevOps practices — GitHub Actions workflows, deployment strategies, infrastructure-as-code patterns, and observability basics.
+description: CI/CD pipeline design and DevOps practices — GitHub Actions workflows, deployment strategies, infrastructure-as-code patterns, and observability basics. Use this skill whenever someone wants to set up CI/CD, write a GitHub Actions workflow, automate deployments, manage infrastructure as code, add observability/monitoring, or asks how to deploy an application, run tests in CI, or structure environments — even if they don't say "DevOps".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # devops
 
 CI/CD pipeline design and DevOps practices — GitHub Actions workflows, deployment strategies, infrastructure-as-code patterns, and observability basics.
+
+## Workflow
+
+When setting up or improving DevOps infrastructure:
+
+1. **CI first** — every repository needs a CI pipeline (lint → test → build → security scan) on every push/PR before anything else
+2. **Then CD** — build the image, push to registry, deploy to staging; add a manual gate before production
+3. **Choose a deployment strategy** — rolling (default), blue/green (instant rollback), canary (gradual traffic shift), or feature flags (decouple deploy from release)
+4. **Codify infrastructure** — manage infra with Terraform/Pulumi; store state remotely; review in PRs
+5. **Add observability** — structured logs + distributed traces (OpenTelemetry) + alerting; every service must have `/healthz` and `/readyz`
+
+### Environment → Strategy Decision
+
+| Need | Strategy |
+|------|---------|
+| Zero-downtime standard deploy | Rolling (Kubernetes default) |
+| Instant full rollback | Blue/Green |
+| Risk-sensitive, high-traffic | Canary (% traffic split) |
+| Decouple deploy from release | Feature flags |
+| Local dev parity | docker-compose / act |
 
 ## Instructions
 

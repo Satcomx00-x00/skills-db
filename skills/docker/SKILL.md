@@ -1,15 +1,25 @@
 ---
 name: docker
-description: Docker containerization best practices — writing lean Dockerfiles, multi-stage builds, image security, and docker-compose patterns for local development.
+description: Docker containerization best practices — writing lean Dockerfiles, multi-stage builds, image security, and docker-compose patterns for local development. Use this skill whenever someone wants to containerize an application, write a Dockerfile, set up docker-compose, reduce image size, scan for vulnerabilities, or asks how to run their app in a container or deploy it to a container registry — even if they don't explicitly say "Docker".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # docker
 
 Docker containerization best practices — writing lean Dockerfiles, multi-stage builds, image security, and docker-compose patterns for local development.
+
+## Workflow
+
+When containerizing an application:
+
+1. **Use multi-stage builds** — separate the build environment from the runtime image to keep production images small
+2. **Order layers by change frequency** — base image → system deps → dependency manifest → install deps → app source (cache busts only what changed)
+3. **Pin exact versions** — never use `latest`; pin both the base image tag and the digest where possible
+4. **Harden the image** — run as non-root user, minimise surface area (alpine/distroless), scan with `trivy` before pushing
+5. **Write a `.dockerignore`** — exclude `.git`, `.env*`, `node_modules`, `dist`, `*.log` to keep the build context small
 
 ## Instructions
 

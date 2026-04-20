@@ -1,15 +1,25 @@
 ---
 name: git
-description: Git workflow best practices — conventional commits, branching strategy, rebase/merge patterns, and commit hygiene for clean project history.
+description: Git workflow best practices — conventional commits, branching strategy, rebase/merge patterns, and commit hygiene for clean project history. Use this skill whenever someone asks about Git workflow, how to write a commit message, branching strategy, PR conventions, how to squash commits, rebase vs merge, or says things like "how should I name my branch" or "how do I write a good commit" — even if they don't say "git best practices".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # git
 
 Git workflow best practices — conventional commits, branching strategy, rebase/merge patterns, and commit hygiene for clean project history.
+
+## Workflow
+
+When working with Git in a team:
+
+1. **Atomic commits** — each commit is one logical change that can be understood and reverted independently
+2. **Conventional commit format** — `<type>(<scope>): <description>` (e.g., `feat(auth): add OAuth2 login`); this enables automated changelogs and semantic versioning
+3. **Short-lived feature branches** — branch from `main`, merge back within 2 days to avoid merge hell; keep PRs focused on one concern
+4. **Rebase before merging** — `git fetch && git rebase origin/main` to keep history linear; squash WIP commits before the PR is reviewed
+5. **Never commit secrets** — use `.gitignore` for `.env` files; install `gitleaks` as a pre-commit hook
 
 ## Instructions
 

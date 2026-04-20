@@ -1,15 +1,35 @@
 ---
 name: frontend
-description: Frontend development patterns — component design, accessibility, performance optimisation, and state management best practices for modern web UIs.
+description: Frontend development patterns — component design, accessibility, performance optimisation, and state management best practices for modern web UIs. Use this skill whenever someone is building UI components, working on a React/Vue/Svelte app, wants to improve accessibility or Core Web Vitals, needs state management advice, or asks how to structure frontend code, handle forms, or make a UI faster — even if they don't say "frontend".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # frontend
 
 Frontend development patterns — component design, accessibility, performance optimisation, and state management best practices for modern web UIs.
+
+## Workflow
+
+When building or reviewing frontend code:
+
+1. **Type-safe first** — every component has explicit prop types; form values are validated with a schema; API responses are typed
+2. **Accessibility by default** — use semantic HTML; all interactive elements must be keyboard-operable; colour contrast must meet WCAG 2.1 AA
+3. **Handle all async states** — every data-fetching hook exposes `isLoading`, `error`, and `data`; handle all three in the UI
+4. **Choose the right state tool** — local `useState` → shared context → server state (TanStack Query) → complex global (Zustand) in that order of preference
+5. **Measure before optimising** — `useMemo`/`useCallback` only after profiling; target Core Web Vitals: LCP < 2.5s, INP < 200ms, CLS < 0.1
+
+### State Tool Selection
+
+| Scope | Tool |
+|-------|------|
+| Local UI state | `useState`, `useReducer` |
+| Shared component tree state | React Context (use sparingly) |
+| Server/async state | TanStack Query, SWR |
+| Complex global client state | Zustand, Jotai |
+| Form state | React Hook Form + Zod |
 
 ## Instructions
 

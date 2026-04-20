@@ -1,15 +1,36 @@
 ---
 name: backend
-description: Backend and API design patterns — RESTful and GraphQL API conventions, error handling, pagination, authentication patterns, and database best practices.
+description: Backend and API design patterns — RESTful and GraphQL API conventions, error handling, pagination, authentication patterns, and database best practices. Use this skill whenever someone is building an API, designing routes, setting up a service layer, handling database queries, implementing pagination, choosing an authentication strategy, or asks how to structure backend code — even if they don't use the word "backend".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # backend
 
 Backend and API design patterns — RESTful and GraphQL API conventions, error handling, pagination, authentication patterns, and database best practices.
+
+## Workflow
+
+When building or reviewing backend code:
+
+1. **Validate at the boundary first** — every route/endpoint must parse and validate its input schema before any business logic runs
+2. **Separate concerns** — Controller (HTTP) → Service (business logic) → Repository (data access); no layer should bleed into another
+3. **Handle errors explicitly** — wrap handlers in error middleware; convert DB/external errors to domain errors before surfacing them
+4. **Choose the right pagination** — cursor-based for real-time/large datasets, offset for simple admin views
+5. **Secure by default** — rate-limit public endpoints, validate auth tokens on every request, never expose internals in error responses
+
+### Quick Decision Guide
+
+| Concern | Pattern to Apply |
+|---------|-----------------|
+| Input validation | Zod / Pydantic schema on every route |
+| API style | REST for CRUD resources; GraphQL for complex nested queries / multiple clients |
+| Pagination | Cursor-based (preferred) or offset |
+| Auth | JWT (stateless) for SPAs/mobile; session cookie for web apps; API key for M2M |
+| Background work | Queue (BullMQ/Celery) — never block an HTTP response |
+| DB queries | ORM with typed models; paginate all unbounded queries; eager-load to avoid N+1 |
 
 ## Instructions
 

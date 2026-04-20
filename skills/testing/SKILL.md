@@ -1,15 +1,34 @@
 ---
 name: testing
-description: Testing strategies and best practices — TDD workflow, test pyramid, unit/integration/e2e patterns, and writing maintainable tests across languages.
+description: Testing strategies and best practices — TDD workflow, test pyramid, unit/integration/e2e patterns, and writing maintainable tests across languages. Use this skill whenever someone is writing tests, setting up a test suite, reviewing test coverage, asking about TDD, how to mock dependencies, how to structure test files, or says things like "how do I test this function", "my tests are flaky", or "what should I test" — even if they don't say "testing best practices".
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # testing
 
 Testing strategies and best practices — TDD workflow, test pyramid, unit/integration/e2e patterns, and writing maintainable tests across languages.
+
+## Workflow
+
+When writing or reviewing tests:
+
+1. **Decide the test type** — unit (single function, mocked deps), integration (component interactions, real DB via testcontainers), or E2E (critical user journeys only)
+2. **Follow AAA** — structure every test as Arrange → Act → Assert; one logical behaviour per test
+3. **Name tests as behaviour descriptions** — `should <do something> when <condition>` or `given <context>, when <action>, then <outcome>`
+4. **Make tests deterministic** — mock `Date.now()`, `Math.random()`, network calls, and file I/O in unit tests; roll back DB transactions after each integration test
+5. **Coverage as a diagnostic, not a target** — aim for ≥ 80% on business logic, but use coverage reports to find untested edge cases, not to hit a number
+
+### Test Type Decision Guide
+
+| What to test | Test type | Tooling |
+|-------------|-----------|---------|
+| Pure function / isolated class | Unit | Vitest / pytest |
+| Service + real DB | Integration | Testcontainers + Vitest/pytest |
+| Full user journey | E2E | Playwright / Cypress |
+| Service-to-service contracts | Contract | Pact |
 
 ## Instructions
 

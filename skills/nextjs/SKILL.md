@@ -1,6 +1,6 @@
 ---
 name: nextjs
-description: Next.js 15 / React 19 state-of-the-art — App Router, async request APIs, use cache directive, Turbopack, Server Functions, Partial Prerendering, and production best practices.
+description: Next.js 15 / React 19 state-of-the-art — App Router, async request APIs, use cache directive, Turbopack, Server Functions, Partial Prerendering, and production best practices. Use this skill whenever someone is building with Next.js, working with the App Router or Server Components, writing Server Actions, handling caching, setting up routing, or asks about deploying or optimising a Next.js application — even if they don't say "Next.js best practices".
 license: MIT
 metadata:
   author: Satcomx00-x00

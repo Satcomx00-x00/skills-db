@@ -1,10 +1,10 @@
 ---
 name: languages
-description: Language-specific coding standards — state-of-the-art TypeScript (strict, type-safe, modern) and Python with uv (fully typed, Pydantic, Ruff), both implementing the code-quality guidelines.
+description: Language-specific coding standards — state-of-the-art TypeScript (strict, type-safe, modern) and Python with uv (fully typed, Pydantic, Ruff), both implementing the code-quality guidelines. Use this skill whenever someone is writing Python or TypeScript code and needs language-specific best practices, project setup, tooling configuration, or idiomatic patterns — even if they don't ask for "standards". Always route to the relevant sub-skill based on the language.
 license: MIT
 metadata:
   author: Satcomx00-x00
-  version: 1.0.0
+  version: 2.0.0
 ---
 
 # languages
