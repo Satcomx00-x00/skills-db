@@ -228,6 +228,55 @@ const duck = Object.assign({ name: 'Duck' }, canFly, canSwim);
 duck.fly(); duck.swim();
 ```
 
+## Guidelines
+
+The following rules are **mandatory** regardless of language or project type:
+
+### Type Safety
+
+- **Full type annotations**: annotate all function parameters, return types, and variables — no implicit `any` in TypeScript, no unannotated functions in Python
+- **No `any` types**: use `unknown` and narrow down, or define precise types; `@ts-ignore` is forbidden except in generated/vendor code
+- **Runtime validation at boundaries**: validate data from external sources (HTTP requests, file reads, env vars, user input) with Zod (TypeScript) or Pydantic / dataclasses (Python) — never trust raw input
+- **Strict null checks**: never access a property on a possibly-null value without an explicit guard
+
+### Error Handling
+
+- **Never silently swallow exceptions** — always handle or re-throw with added context
+- **Typed error classes**: define domain-specific error types (`UserNotFoundError`, `ValidationError`) instead of bare `Error('message')`
+- **Log at the catch boundary** — use structured logging (`loguru` in Python / `console.error` with context in TypeScript) including relevant IDs (userId, requestId)
+- **Propagate meaningful messages**: error messages must tell the caller *what* went wrong, *where*, and ideally *why*
+
+### Immutability
+
+- Prefer `const` over `let`; prefer `readonly` properties and `Readonly<T>` in TypeScript
+- Never mutate function parameters — clone if modification is needed
+- Prefer pure functions: same input always produces same output, no hidden side effects
+
+### Naming Conventions
+
+- Names must express intent: `getUserByEmail()` not `getUser()` or `fetch()`
+- Booleans read as yes/no questions: `isAuthenticated`, `hasPermission`, `canRetry`
+- Constants in `SCREAMING_SNAKE_CASE` for global/module-level values
+- No single-letter variables except loop indices (`i`, `j`) and well-known math/science notation
+
+### Code Size Limits
+
+| Unit | Limit |
+|------|-------|
+| Function/method | ≤ 30 lines |
+| File/module | ≤ 300 lines |
+| Cyclomatic complexity | ≤ 10 per function |
+| Parameters per function | ≤ 4 (use a parameter object beyond this) |
+
+### Documentation
+
+- Public functions and classes **must** have doc-comments (`TSDoc` / Python docstring)
+- Complex business logic requires an inline comment explaining *why*, not *what*
+- No commented-out code in committed files — use version control instead
+- READMEs must be updated alongside the code they describe
+
+---
+
 ### Refactoring Techniques
 
 Improve internal structure without changing external behaviour:

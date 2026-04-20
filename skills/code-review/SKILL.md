@@ -15,6 +15,33 @@ Code review standards and checklist — how to give constructive feedback, what 
 
 When reviewing code (as an agent or assisting a human reviewer), apply the following checklist and principles:
 
+## Guidelines
+
+When reviewing code, the following quality rules apply. Items marked **blocking** must be resolved before approval.
+
+### Type Safety (blocking)
+
+- [ ] No `any` types introduced without a documented justification
+- [ ] All new functions have explicit parameter and return type annotations
+- [ ] Data from external sources (API, env vars, DB) is validated with a typed schema before use
+- [ ] No non-null assertions (`!`) without an adjacent guard or a comment explaining why it is safe
+
+### Error Handling (blocking)
+
+- [ ] No empty `catch` blocks or silently swallowed exceptions
+- [ ] Errors propagate with enough context to diagnose in production (relevant IDs, operation name)
+- [ ] All async operations have error handling — no un-awaited promises without `.catch()`
+
+### Code Quality (advisory)
+
+- [ ] Functions are ≤ 30 lines and have a single responsibility
+- [ ] No commented-out code committed to the branch
+- [ ] Public API surface (functions, classes, endpoints) has doc-comments
+- [ ] Names express intent — no single-letter variables outside of loop indices
+- [ ] No magic numbers or strings — use named constants
+
+---
+
 ### Review Checklist
 
 **Correctness**
