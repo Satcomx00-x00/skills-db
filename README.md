@@ -20,6 +20,8 @@ npx skillfish add Satcomx00-x00/skills-db/skills/devops
 npx skillfish add Satcomx00-x00/skills-db/skills/frontend
 npx skillfish add Satcomx00-x00/skills-db/skills/backend
 npx skillfish add Satcomx00-x00/skills-db/skills/code-quality
+npx skillfish add Satcomx00-x00/skills-db/skills/languages/typescript
+npx skillfish add Satcomx00-x00/skills-db/skills/languages/python
 ```
 
 ## Team Skill Sync
@@ -38,7 +40,9 @@ Add a `skillfish.json` to your project to share skills across your team:
     "Satcomx00-x00/skills-db/skills/devops",
     "Satcomx00-x00/skills-db/skills/frontend",
     "Satcomx00-x00/skills-db/skills/backend",
-    "Satcomx00-x00/skills-db/skills/code-quality"
+    "Satcomx00-x00/skills-db/skills/code-quality",
+    "Satcomx00-x00/skills-db/skills/languages/typescript",
+    "Satcomx00-x00/skills-db/skills/languages/python"
   ]
 }
 ```
@@ -61,6 +65,8 @@ npx skillfish install
 | [`frontend`](skills/frontend/SKILL.md) | Component design, accessibility, Core Web Vitals |
 | [`backend`](skills/backend/SKILL.md) | REST API design, auth patterns, database best practices |
 | [`code-quality`](skills/code-quality/SKILL.md) | Refactoring techniques and design patterns (GoF) |
+| [`languages/typescript`](skills/languages/typescript/SKILL.md) | Strict TypeScript — tsconfig, Zod, branded types, modern patterns |
+| [`languages/python`](skills/languages/python/SKILL.md) | Modern Python with uv — type annotations, Pydantic, Ruff, mypy strict |
 
 ## Supported Agents
 
@@ -78,6 +84,10 @@ skills/
   devops/SKILL.md
   frontend/SKILL.md
   backend/SKILL.md
+  languages/
+    SKILL.md
+    typescript/SKILL.md
+    python/SKILL.md
   code-quality/
     SKILL.md                          ← category overview
     extract-method/SKILL.md
